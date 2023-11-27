@@ -2,10 +2,10 @@
 #include"utils.h"
 double getAirDistance(double originLatitude,double originLongitude,
                       double destinationLatitude,double destinationLongitude){
-    degreesToRadians(double originLatitude);
-    degreesToRadians(double originLongitude);
-    degreesToRadians(double destinationLatitude);
-    degreesToRadians(double destinationLongitude);
+    degreesToRadians(originLatitude);
+    degreesToRadians(originLongitude);
+    degreesToRadians(destinationLatitude);
+    degreesToRadians(destinationLongitude);
     double delta = destinationLongitude - originLongitude;
     float const R = 6371;
     double distance = acos(sin(originLatitude) * sin(destinationLatitude) + cos(originLatitude) * cos(destinationLatitude) *cos(delta)) * R;
