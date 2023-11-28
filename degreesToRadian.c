@@ -1,4 +1,5 @@
 #include<math.h>
 double degreesToRadians(double degree){
-    return (degree * M_PI)/180;
+    degree =  (degree * M_PI)/180;
+    return degree;
 }
