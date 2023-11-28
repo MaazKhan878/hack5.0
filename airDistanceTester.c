@@ -38,15 +38,39 @@ int main(){
    
     }
 
-    double originLatitude = 40.0, originLongitude = -85, destinationLatitude = 42, destinationLongitude = -96;
+    double originLatitude = 40.0, originLongitude = -85.0, destinationLatitude = 42.0, destinationLongitude = -96.0;
     printf("getAirDistance(%lf,%lf,%lf,%lf): ",originLatitude,originLongitude,destinationLatitude,destinationLongitude);
     returnedValue =round(getAirDistance(originLatitude,originLongitude,destinationLatitude,destinationLongitude));
-    if(returnedValue == 949.000000){
+    if(returnedValue == 949.0){
      printf("PASSED\n");
      passed++;
     }
     else{
-     printf("Failed: degreeToRadians returned %lf, Expected 1\n",returnedValue);
+     printf("Failed: degreeToRadians returned %lf, Expected 949.0\n",returnedValue);
+     failed++;
+   
+    }
+    originLatitude = -40.0, originLongitude = 85.0, destinationLatitude = -45.0, destinationLongitude = 96.0;
+    printf("getAirDistance(%lf,%lf,%lf,%lf): ",originLatitude,originLongitude,destinationLatitude,destinationLongitude);
+    returnedValue =round(getAirDistance(originLatitude,originLongitude,destinationLatitude,destinationLongitude));
+    if(returnedValue == 1058.0){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: degreeToRadians returned %lf, Expected 1058.0\n",returnedValue);
+     failed++;
+   
+    }
+    originLatitude = 85.0, originLongitude = -50.0 , destinationLatitude = 96.0, destinationLongitude = -63.0;
+    printf("getAirDistance(%lf,%lf,%lf,%lf): ",originLatitude,originLongitude,destinationLatitude,destinationLongitude);
+    returnedValue =round(getAirDistance(originLatitude,originLongitude,destinationLatitude,destinationLongitude));
+    if(returnedValue == 1215.0){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: degreeToRadians returned %lf, Expected 1215.0\n",returnedValue);
      failed++;
    
     }
