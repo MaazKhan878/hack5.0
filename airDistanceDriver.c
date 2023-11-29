@@ -14,12 +14,14 @@ int main(){
  airDistance = getAirDistance(originLatitude,originLongitude,destinationLatitude,destinationLongitude);
  printf("Air Distance  = %0.2lf\n Km",airDistance);
  printf("\n");
+ // take input from user 
+ // i made flexible for user to give the value by itself
  double percentVelocity, time;
- printf("Enter the time observed it rest in second: ");
+ printf("Enter the time observed it rest in year: ");
  scanf("%lf",&time);
  printf("Enter the Velocity of the object scale[0,1]: ");
  scanf("%lf",&percentVelocity);
  lorentzTimeDilation(time, percentVelocity);
- printf("the time dilation = %lf year\n",lorentzTimeDilation(time, percentVelocity));
+ printf("the time dilation = %0.2lf year\n",lorentzTimeDilation(time, percentVelocity));
 
 }
