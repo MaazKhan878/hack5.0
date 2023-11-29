@@ -30,7 +30,7 @@ int main(){
      failed++;
    
     }
-    int longitude = 96.0;
+    double longitude = 96.0;
     returnedValue = round(degreesToRadians(longitude));
     if(returnedValue == 2){
      printf("PASSED\n");
@@ -78,6 +78,41 @@ int main(){
     }
     else{
      printf("Failed: degreeToRadians returned %lf, Expected 1215.0\n",returnedValue);
+     failed++;
+   
+    }
+    // the test case write for the lorentzTimeDilation() function to check it work
+    double t = 1.0, percentC = 0.25;
+    returnedValue = round(lorentzTimeDilation(t, percentC));
+    if(returnedValue == 1.00){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: lorentzTimeDilation() returned %lf, Expected 1.00\n",returnedValue);
+     failed++;
+   
+    }
+
+    t = 2.0, percentC = 0.50;
+    returnedValue = round(lorentzTimeDilation(t, percentC));
+    if(returnedValue == 2.00){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: lorentzTimeDilation() returned %lf, Expected 2.00\n",returnedValue);
+     failed++;
+   
+    }
+    t = 2.56, percentC = 0.6777;
+    returnedValue = round(lorentzTimeDilation(t, percentC));
+    if(returnedValue == 3.00){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: lorentzTimeDilation() returned %lf, Expected 3.00\n",returnedValue);
      failed++;
    
     }
