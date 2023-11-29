@@ -1,4 +1,4 @@
- // i made lorentzTimeDilation() function for to find time dilation
+ // i made lorentzTimeDilation() function for to find time
  #include<math.h>
  double lorentzTimeDilation(double t, double percentC){
     double T;
